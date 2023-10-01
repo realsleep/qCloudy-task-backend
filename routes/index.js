@@ -14,9 +14,10 @@ router.get("/backend", async function (req, res, next) {
   const response_public_ipv4 = await fetch(
     "http://169.254.169.254/latest/meta-data/public-ipv4"
   );
-  const public-ipv4 = await response_public_ipv4.text();
+  const public_ipv4 = await response_public_ipv4.text();
   const result = {
     instance_id,
+    public_ipv4
 
   }
   res.json(result);
